@@ -1,0 +1,1329 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+ol {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+
+/* 폰트 import */
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 상단 네비 버튼  */
+.actionBtn7 {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    margin: auto;
+    padding: 0;
+    line-height: 40px;
+    color: #4c4c4d;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+}
+
+.actionBtn7:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #444;
+    transform: scale3d(0, 1, 1);
+    transform-origin: center center;
+    transition: transform .3s;
+}
+
+.actionBtn7:hover:after {
+    transform: scale3d(1, 1, 1);
+}
+
+.actionBtn6 {
+    position: relative;
+    display: block;
+    width: 166px;
+    height: 40px;
+    margin: auto;
+    text-decoration: none;
+}
+
+.actionBtn6 .hover .txt {
+    display: block;
+    width: 160px;
+    color: #fff;
+    background-color: #5F4B8B;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 34px;
+    font-size: 14px;
+    font-family: oswald;
+    text-transform: uppercase;
+}
+
+.actionBtn6 .hover:after {
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -2px;
+    content: "";
+    width: 100%;
+    height: 40px;
+    border: 2px solid #4c4c4d;
+    transition: transform .2s;
+    -webkit-transition: -webkit-transform .2s;
+    -moz-transition: -moz-transform .2s;
+}
+
+.actionBtn6:hover .hover:after {
+    transform: scale(1.06, 1.25);
+    -webkit-transform: scale(1.06, 1.25);
+    -moz-transform: scale(1.06, 1.25);
+}
+
+/* header 햄버거 버튼 start */
+.navBtn4 {
+    position: relative;
+    display: block;
+    width: 2vw;
+    height: 1vw;
+    margin: auto;
+    text-align: center;
+}
+
+.navBtn4 .bar {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: 2px;
+    background: black;
+    transition: all .325s ease-in-out;
+    -webkit-transition: all .325s ease-in-out;
+    -moz-transition: all .325s ease-in-out;
+}
+
+.navBtn4 .bar:nth-child(1) {
+    top: 5px;
+    left: 0;
+}
+
+.navBtn4 .bar:nth-child(2) {
+    top: 15px;
+}
+
+.navBtn4 .bar:nth-child(3) {
+    top: 15px;
+}
+
+.navBtn4 .bar:nth-child(4) {
+    top: 25px;
+    left: 0;
+}
+
+.is-open .bar:nth-child(1) {
+    left: 40px;
+    opacity: 0;
+}
+
+.is-open .bar:nth-child(2) {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+
+.is-open .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+}
+
+.is-open .bar:nth-child(4) {
+    left: -40px;
+    opacity: 0;
+}
+
+/* PORTFOLIO의 +about 호버 */
+.actionBtn1 {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 166px;
+    height: 38px;
+    margin: auto;
+    line-height: 40px;
+    border: 1px solid #4c4c4d;
+    color: #4c4c4d;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: oswald;
+}
+
+.actionBtn1 span {
+    position: relative;
+    transition: color .25s ease-out;
+    -webkit-transition: color .5s ease-out;
+    -moz-transition: color .5s ease-out;
+}
+
+.actionBtn1:hover span {
+    color: #fff;
+}
+
+.actionBtn1 .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #4c4c4d;
+    border: 1px solid transparent;
+    transform: scale(1, 0);
+    -webkit-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform-origin: center top;
+    -webkit-transform-origin: center top;
+    -moz-transform-origin: center top;
+    -ms-transform-origin: center top;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+}
+
+.actionBtn1:hover .hover {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+}
+
+/* 섹션부분 about / image +about 호버 */
+.actionBtn2 {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 166px;
+    height: 38px;
+    line-height: 40px;
+    border: 1px solid #ffffff;
+    color: #4E2682;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: oswald;
+}
+
+.actionBtn2 span {
+    position: relative;
+    transition: color .25s ease-out;
+    -webkit-transition: color .5s ease-out;
+    -moz-transition: color .5s ease-out;
+}
+
+.actionBtn2:hover span {
+    color: #fff;
+}
+
+.actionBtn2 .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #BDB1CC;
+    border: 1px solid transparent;
+    transform: scale(1, 0);
+    -webkit-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform-origin: center top;
+    -webkit-transform-origin: center top;
+    -moz-transform-origin: center top;
+    -ms-transform-origin: center top;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+}
+
+.actionBtn2:hover .hover {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+}
+
+/* PORTFOLIO, SKILLS 호버 */
+.box {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.actionImg8 {
+    position: relative;
+}
+
+.actionImg8 img {
+    width: 100%;
+    height: 100%;
+}
+
+.actionImg8 .back {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+.actionImg8 .back .back_inner {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    vertical-align: middle;
+}
+
+.actionImg8 .back .back_inner span {}
+
+.actionImg8 .back .back_inner .sub_tit {
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+}
+
+.actionImg8 .back .back_inner .desc {
+    margin-top: 19px;
+    color: #b1b1b1;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.actionImg8:hover .back {
+    transform: rotateY(0deg);
+    opacity: 1;
+    transition: opacity .3s, transform .6s;
+}
+
+/* CONTACT에 있는 +more 호버*/
+.actionBtn3 {
+    position: relative;
+    display: block;
+    width: 166px;
+    height: 38px;
+    margin: auto;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-family: oswald;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.actionBtn3 .hover {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: block;
+    border: 1px solid #4c4c4d;
+    width: 100%;
+    height: 100%;
+    transition: transform .25s ease-out;
+    -webkit-transition: -webkit-transform .25s ease-out;
+    -moz-transition: -moz-transform .25s ease-out;
+}
+
+.actionBtn3:hover .hover {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+}
+
+/* 이미지8개 아래 있는 about탭에 적용  */
+.txt_view {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: #fff;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.actionTxtType8 {
+    padding: 0;
+    text-align: center;
+}
+
+.actionTxtType8 .txt {
+    font-size: 8vw;
+    line-height: 10vw;
+    color: #35352f;
+    font-weight: 300;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+}
+
+.actionTxtType8 .txt span {
+    white-space: pre-line;
+    position: relative;
+    letter-spacing: 0;
+    transition: text-shadow .5s;
+    -webkit-transition: text-shadow .5s;
+    -moz-transition: text-shadow .5s;
+}
+
+.actionTxtType8 .txt span.gap {
+    margin-right: 15px;
+}
+
+.actionTxtType8 .txt > span:before {
+    position: absolute;
+    left: 0;
+    content: attr(data-content);
+    color: #A38DF2;
+    overflow: hidden;
+    width: 0%;
+    transition: width .8s .6s;
+    -webkit-transition: width .8s .6s;
+    -moz-transition: width .8s .6s;
+}
+
+.actionTxtType8:hover .txt span {
+    color: #FFE1BA;
+    text-shadow: -1px -1px 5px #fff, 1px 1px 1px #666, 2px 2px 1px #666, 3px 3px 1px #666, 4px 4px 1px #666, 5px 5px 1px #666, 6px 6px 1px #caf0eb, 7px 7px 1px #666, 8px 8px 1px #666, 9px 9px 1px #666, 10px 10px 1px #666;
+}
+
+.actionTxtType8:hover .txt > span:before {
+    width: 50%;
+}
+
+/* 메뉴 전환 애니메이션  */
+.actionCon {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+}
+
+.actionType3 {
+    position: initial;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #a795c7;
+}
+
+.actionType3 span.ac_ico {
+    display: block;
+    padding: 5vw 0;
+}
+
+.actionType3 span.ac_ico img {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    opacity: 1;
+    animation: translateArr 1.2s ease-out infinite;
+    -webkit-animation: translateArr 1.2s ease-out infinite;
+    -moz-animation: translateArr 1.2s ease-out infinite;
+}
+
+@keyframes translateArr {
+    0% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+
+    20% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    25% {
+        opacity: .7;
+    }
+
+    33% {
+        transform: translate3d(0, 22px, 0);
+        -webkit-transform: translate3d(0, 22px, 0);
+        opacity: .5;
+    }
+
+    75% {
+        transform: translate3d(0, -15px, 0);
+        -webkit-transform: translate3d(0, -15px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes translateArr {
+    0% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+
+    20% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    25% {
+        opacity: .7;
+    }
+
+    33% {
+        transform: translate3d(0, 22px, 0);
+        -webkit-transform: translate3d(0, 22px, 0);
+        opacity: .5;
+    }
+
+    75% {
+        transform: translate3d(0, -15px, 0);
+        -webkit-transform: translate3d(0, -15px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+/* skill css */
+.box {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.actionImg2 {
+    position: relative;
+}
+
+.actionImg2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.actionImg2 .hover {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 15.1vw;
+    height: 100%;
+    color: #efefef;
+    text-align: center;
+    padding-top: 46.2%;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -moz-transition: opacity .2s ease-out;
+}
+
+.actionImg2 .hover .sub_tit {
+    position: relative;
+    font-size: 12px;
+    color: #fff;
+    opacity: 0;
+    padding-top: 1vw;
+    font-family: 'Encode Sans SC', sans-serif;
+    transition: animation 1s ease .2s, opacity .5s ease-out .3s;
+    -webkit-transition: -webkit-animation 1s ease .2s, opacity .5s ease-out .3s;
+    -moz-transition: -moz-animation 1s ease .2s, opacity .5s ease-out .3s;
+}
+
+.actionImg2:hover .hover {
+    opacity: 1;
+}
+
+.actionImg2:hover .hover .sub_tit {
+    animation: translateHover .8s .2s;
+    -webkit-animation: translateHover .8s .2s;
+    -moz-animation: translateHover .8s .2s;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    opacity: 1;
+}
+
+@keyframes translateHover {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+        -webkit-transform: translate3d(0, -20px, 0);
+        -moz-transform: translate3d(0, -20px, 0);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate3d(0, 20px, 0);
+        -webkit-transform: translate3d(0, 20px, 0);
+        -moz-transform: translate3d(0, 20px, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -10px, 0);
+        -webkit-transform: translate3d(0, -10px, 0);
+        -moz-transform: translate3d(0, -10px, 0);
+    }
+
+    80% {
+        transform: translate3d(0, 0px, 0);
+        -webkit-transform: translate3d(0, 0px, 0);
+        -moz-transform: translate3d(0, 0px, 0);
+    }
+
+    85%,
+    100% {
+        opacity: 1;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+    }
+}
+
+@-webkit-keyframes translateHover {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+        -webkit-transform: translate3d(0, -20px, 0);
+        -moz-transform: translate3d(0, -20px, 0);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate3d(0, 20px, 0);
+        -webkit-transform: translate3d(0, 20px, 0);
+        -moz-transform: translate3d(0, 20px, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -10px, 0);
+        -webkit-transform: translate3d(0, -10px, 0);
+        -moz-transform: translate3d(0, -10px, 0);
+    }
+
+    80% {
+        transform: translate3d(0, 0px, 0);
+        -webkit-transform: translate3d(0, 0px, 0);
+        -moz-transform: translate3d(0, 0px, 0);
+    }
+
+    85%,
+    100% {
+        opacity: 1;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+    }
+}
+
+/* 섹션부분 앞글자 강조*/
+.sec1 {
+    color: #F36AAB;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+}
+
+.sec2 {
+    color: #FC9A35;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+}
+
+.sec3 {
+    color: #FCE704;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+}
+
+.sec4 {
+    color: #BFE11B;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+}
+
+.sec5 {
+    color: #2FCFFF;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+}
+
+/* 모바일 페이지 로고부분 배경*/
+.css-gradient {
+    /*start ------------*/
+    background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(0.25, #cfc2e0), color-stop(0.5, #a795c7), color-stop(0.75, #cfc2e0), color-stop(1, #ffffff));
+    background: -moz-linear-gradient(top, #ffffff 0%, #cfc2e0 25%, #a795c7 50%, #cfc2e0 75%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #cfc2e0 25%, #a795c7 50%, #cfc2e0 75%, #ffffff 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #cfc2e0 25%, #a795c7 50%, #cfc2e0 75%, #ffffff 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%, #cfc2e0 25%, #a795c7 50%, #cfc2e0 75%, #ffffff 100%);
+    background: linear-gradient(top, #ffffff 0%, #cfc2e0 25%, #a795c7 50%, #cfc2e0 75%, #ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', gradientType=0);
+}
+
+/* 전체 css 시작 */
+
+
+/* 모바일 css 시작 */
+/* 모바일 header css 시작 */
+header {
+    padding-top: 10px;
+}
+
+header > h1 {
+    width: 80%;
+    margin: auto;
+}
+
+header > h1 > a > img {
+    width: 100%;
+}
+
+header > nav {
+    display: none;
+    overflow: hidden;
+}
+
+header > nav> ul {
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    margin-top: 1.5%;
+}
+
+header > nav > ul > li {
+    flex: auto;
+    float: left;
+    text-align: center;
+}
+
+
+
+/* 모바일 header css 끝 */
+
+/* 모바일 section css 시작 */
+section {
+    padding: 2vw 0;
+    overflow: hidden;
+}
+
+section > div#big {
+    width: 80%;
+    margin: auto;
+    padding: 0 0 35px 0;
+}
+
+section > div#big > div > p {
+    overflow: hidden;
+    padding-bottom: 10px;
+    color: #141A46;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+section > div > div > a.actionBtn1 > span {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+}
+
+section > div > h2 {
+    width: 80%;
+    margin: auto;
+}
+
+section > div > h2 > img {
+    width: 100%;
+    padding-top: 3vw;
+}
+
+/* 모바일 section css 끝*/
+
+/* 모바일 image css 시작 */
+div#image {
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    padding: 2vw 0;
+}
+
+div#image > a.actionBtn1 > span {
+    display: block;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+div#image > div {
+    margin: auto;
+    padding: 1vw 0;
+}
+
+div#image > div#port > div.box.actionImg8 > div.back {
+    display: none;
+}
+
+div#image > div > div {
+    width: 36vw;
+    float: left;
+    margin: 1.5%;
+}
+
+div#image > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 모바일 image css 끝 */
+
+/* 모바일 ability css 시작 */
+div#ability {
+    width: 80%;
+    margin: auto;
+}
+
+/* 모바일 ability css 끝 */
+
+/* 모바일 info css 시작 */
+div#info {
+    width: 80%;
+    margin: auto;
+}
+
+div#info > div#skill > ul {
+    overflow: hidden;
+    padding: 3vw 0;
+}
+
+div#info > div#skill > ul > li.box.actionImg2 > div.hover > div.sub_tit {
+    padding-top: 0;
+}
+
+div#info > div#skill > ul > li {
+    float: left;
+    width: 23%;
+    margin: 5%;
+}
+
+div#info > div#skill > ul > li > div {
+    font-size: 10px;
+}
+
+div#info > div#skill > ul > li.box.actionImg2 > div.hover {
+    display: none;
+}
+
+div#info > div#skill > ul > li > img {
+    width: 15vw;
+    margin: auto;
+}
+
+/* 모바일 info css 끝*/
+
+
+
+/* 모바일 info2 css 시작 */
+div#info2 {
+    background-image: url(../img/background1.jpg);
+    background-repeat: no-repeat;
+    padding: 20vw 0;
+    background-size: cover;
+    background-attachment: inherit;
+}
+
+div#info2 > h2 {
+    color: white;
+    width: 80%;
+    margin: auto;
+    padding: 1vw 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+div#info2 > p {
+    width: 80%;
+    margin: auto;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Sunflower', sans-serif;
+    font-size: 3vw;
+}
+
+div#info2 > a.actionBtn3 > span.hover {
+    display: block;
+    border: 2px solid white;
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+
+div#info2 > a.actionBtn3 > span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+}
+
+/* 모바일 info2 css 끝 */
+
+/* 모바일 footer css 시작 */
+footer {
+    overflow: hidden;
+}
+
+footer > dl {
+    width: 80%;
+    margin: auto;
+    padding: 5px 0;
+}
+
+footer > dl:nth-child(2) > dd > a {
+    text-align: center;
+    color: black;
+    font-size: 2vw;
+}
+
+footer > dl > dt,
+dd {
+    text-align: center;
+    padding: 1vw 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer > dl > dd {
+    font-size: 2vw;
+}
+
+footer > dl:last-child > dt + dd {
+    float: left;
+    width: 65%;
+}
+
+footer > dl:last-child > dt + dd + dd {
+    float: right;
+    width: 35%;
+}
+
+/* 모바일 footer css 끝 */
+/* 모바일 css 끝 */
+
+
+/* 태블릿 css 시작 */
+@media screen and (min-width: 481px) {
+
+    /* 태블릿 header css 시작 */
+    header > h1 {
+        width: 50%;
+    }
+
+    header > nav {
+        display: block;
+    }
+
+    header > nav > div {
+        width: 76%;
+        margin: auto;
+        overflow: hidden
+    }
+
+    header > nav > div > span > a {
+        width: 25%;
+        float: left;
+    }
+
+    header > div {
+        display: none;
+    }
+
+    /* 태블릿 header css 끝 */
+
+    /* 태블릿 section css 시작 */
+    section.css-gradient {
+        background-image: url(../img/background1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    section > div#big {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    section > div#big > div {
+        width: 47%;
+        float: left;
+        padding-left: 2%;
+    }
+
+    section > div#big > div > p {
+        padding-top: 3vw;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5vw;
+        line-height: 3vw;
+    }
+
+    section > div#big > div > a.actionBtn2 {
+        margin: inherit;
+    }
+
+    section > div#big > div > a > span {
+        color: white;
+    }
+
+    section > div#big > h2 {
+        float: left;
+        width: 50%;
+    }
+
+    section > div#big > h2 > img {
+        width: 40vw;
+        height: 40vw;
+        padding: 0px;
+    }
+
+    /* 태블릿 section css 끝 */
+
+    /* 태블릿 image css 시작 */
+    div#image {
+        padding: 7vw 0;
+    }
+
+    div#image > div {
+        overflow: hidden;
+    }
+
+    div#image > div#port > div.box.actionImg8 {
+        width: 22vw;
+    }
+
+    div#image > div#port > div.box.actionImg8 > div.back {
+        height: 98%;
+    }
+
+    div#image > div#port > div.box.actionImg8 > div.back {
+        display: table;
+    }
+
+    div#image > div > img {
+        width: 100%;
+    }
+
+    div#image > div > div.box.actionImg8 > div.back > div.back_inner > span.sub_tit {
+        font-size: 1.5vw;
+    }
+
+    div#image > a.actionBtn1 > span {
+        font-size: 1.5vw;
+    }
+
+    /* 태블릿 image css 끝 */
+
+    /* 태블릿 info css 시작 */
+    div#info2 > h2 {
+        font-size: 3vw;
+    }
+
+    div#info2 > p {
+        font-size: 2vw;
+        padding-bottom: 3vw;
+    }
+
+    div#info2 > a.actionBtn3 > span {
+        font-size: 1.5vw;
+    }
+
+    div#info > div#skill > ul > li {
+        width: 11.5vw;
+        padding-left: 1.5vw;
+    }
+
+    div#info > div#skill > ul > li > img {
+        width: 9vw;
+    }
+
+    div#info > div#skill > ul > li.box.actionImg2 > div.hover {
+        width: 9vw;
+        left: 2vw;
+        display: table;
+    }
+
+    div#info > div#skill > ul > li.box.actionImg2 > div.hover > div.sub_tit {
+        padding-top: 0.5vw;
+        font-size: 16px;
+    }
+
+    /* 태블릿 info css 끝 */
+
+   
+
+    /* 태블릿 footer css 시작 */
+    footer {
+        width: 80%;
+        margin: auto;
+    }
+
+    footer > dl:nth-child(2) > a > dd {
+        text-align: left;
+        color: black;
+        font-size: 13px;
+    }
+
+    footer > dl {
+        width: 33.333333%;
+        float: left;
+    }
+
+    footer > dl > dt {
+        text-align: left;
+        font-size: 2vw;
+    }
+
+    footer > dl > dd {
+        text-align: left;
+        font-size: 1.5vw;
+    }
+
+    footer > dl:last-child > dd:nth-child(2) {
+        width: 100%;
+        padding: 1vw 0;
+    }
+
+    footer > dl:last-child > dd:last-child {
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    footer > dl:nth-child(2) > dd > a {
+        font-size: 1.5vw;
+    }
+
+    /* 태블릿 footer css 끝 */
+
+}
+
+/* 태블릿 css 끝 */
+
+/* 웹 css 시작 */
+@media screen and (min-width: 1024px) {
+
+    /* 웹 header css 시작 */
+    header {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    header > h1 {
+        float: left;
+        width: 20%;
+    }
+
+    header > h1 > a {
+        width: 20%;
+    }
+
+    header > nav {
+        width: 65%;
+        margin: auto;
+        float: left;
+    }
+
+    header > nav > ul> li > a.code_view.actionBtn7 {
+        font-size: 1vw;
+    }
+
+    
+
+    header > div#berger {
+        float: right;
+        width: 15%;
+        display: inherit;
+        height: 3vw;
+    }
+
+    header > div#berger > a {
+        margin-top: 1vw
+    }
+
+    /* 웹 header css 끝 */
+
+    /* 웹 section css 시작 */
+    section > div#big > div > p {
+        padding: 6vw 0 5px 0;
+        font-size: 1vw;
+        line-height: 2.5vw
+    }
+
+    section > div > p {
+        font-size: 20px;
+        padding: 55px 0 10px 0;
+    }
+
+    section > div > p > span {
+        font-size: 28px;
+    }
+
+    /* 웹 section css 끝 */
+
+    /* 웹 image css 시작 */
+    div#image > div#port > div.box.actionImg8 {
+        width: 22%;
+    }
+
+    div#image > div#port > div.box.actionImg8 > div.back > div.back_inner > span.sub_tit {
+        font-size: 24px;
+        font-family: 'GmarketSansLight';
+    }
+
+    div#image > a.actionBtn1.actionBtn2 {
+        font-size: 20px;
+    }
+
+    /* 웹 image css 끝 */
+
+    /* 웹 info css 시작 */
+    div#info > div#skill > ul > li > img {
+        width: 6vw;
+    }
+
+    div#info > div#skill > ul {
+        padding: 0;
+    }
+
+    div#info > div#skill > ul > li {
+        width: 3vw;
+        margin: 4%;
+    }
+
+    div#info > div#skill > ul > li.box.actionImg2 > div.hover {
+        width: 6vw;
+        left: 1.5vw;
+    }
+
+    div#info > div#skill > ul > li.box.actionImg2 > div.hover > div.sub_tit {
+        padding-top: 2.5vw;
+        font-size: 20px;
+    }
+
+    /* 웹 info css 끝 */
+
+    /* 웹 ability 시작 */
+    div#ability{
+        padding-top: 5vw;
+    }
+    /* 웹 ability 끝 */
+    
+    /* 웹 info 시작 */
+
+    div#info{
+        padding-bottom: 15vw;
+    }
+    /* 웹 info 끝 */
+    
+    
+    
+
+    /* 웹 info2 css 시작 */
+    div#info2 > p {
+        font-size: 1.5vw;
+        padding-bottom: 2vw;
+        font-family: 'GmarketSansLight';
+    }
+
+    div#info2 > a.actionBtn3 > span {
+        font-size: 1vw;
+    }
+
+    /* 웹 info2 css 끝 */
+
+    /* 웹 footer css 시작 */
+    footer {
+        padding: 30px 0;
+    }
+
+    footer > dl > dt {
+        font-size: 1.5vw;
+    }
+
+    footer > dl > dd {
+        font-size: 1vw;
+    }
+
+    footer > dl:nth-child(2) > a > dd {
+        text-align: left;
+        color: black;
+        font-size: 13px;
+    }
+
+    footer > dl:nth-child(2) > dd > a {
+        font-size: 1vw;
+    }
+
+    /* 웹 footer css 끝 */
+}
+
+/* 웹 css 끝 */
+/* 전체 css 끝 */
